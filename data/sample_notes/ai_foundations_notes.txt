@@ -1,0 +1,19 @@
+# Unit I & Foundations of Generative AI — Academic Course Notes
+Course: Generative AI (Continuous Assessment)
+Topic: Foundations of Probabilistic Modeling, Prompt Engineering, and Inference
+
+## 1. Generative vs. Discriminative Modeling
+Discriminative models estimate the conditional probability distribution P(Y|X), mapping observable features X directly to target class labels Y. Examples include Logistic Regression, Support Vector Machines (SVM), and standard deep convolutional classification backbones.
+In contrast, Generative models estimate the joint probability distribution P(X, Y) or the marginal data distribution P(X). By modeling the underlying data generation process, generative models can generate new synthetic data points x_new ~ P(X). Examples include Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Diffusion Probabilistic Models, and Autoregressive Large Language Models (LLMs).
+
+## 2. Prompt Engineering Strategies
+- Zero-Shot Prompting: Providing a direct instruction without input-output exemplars. Relies entirely on pre-trained semantic representations.
+- Few-Shot Prompting (In-Context Learning): Supplying k exemplary input-output demonstrations before the final query. Conditions the autoregressive attention mechanism to follow demonstrated formatting and reasoning styles without updating model weights.
+- Chain-of-Thought (CoT) Prompting: Prompts the model to break complex queries into intermediate symbolic steps before emitting the terminal answer. Substantially improves logical accuracy in multi-step mathematical and algorithmic derivations.
+
+## 3. Temperature Scaling in Softmax Decoding
+During autoregressive generation, next-token logits z_i are converted to probabilities p_i via the temperature-scaled softmax function:
+p_i = exp(z_i / T) / sum_j exp(z_j / T)
+- T = 0.0 corresponds to greedy decoding (argmax), always picking the highest-logit token deterministically.
+- T = 0.7 balances coherence and vocabulary diversity for educational dialogue.
+- T > 1.0 flattens the probability distribution, increasing output entropy and randomness.

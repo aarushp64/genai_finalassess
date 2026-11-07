@@ -1,0 +1,223 @@
+/* NeuroTutor AI - Custom Theme Stylesheet */
+/* Color Palette: #2A3140 (bg), #3C4959 (surface), #728EA6 (accent), #AEB7BF (muted), #F2F2F2 (text) */
+
+/* Global container styling */
+.stApp {
+    background-color: #2A3140 !important;
+    color: #F2F2F2 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: #232936 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-testid="stSidebar"] .stMarkdown h1, 
+[data-testid="stSidebar"] .stMarkdown h2, 
+[data-testid="stSidebar"] .stMarkdown h3 {
+    color: #F2F2F2 !important;
+}
+
+/* Card container */
+.neuro-card {
+    background-color: #3C4959;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.neuro-card:hover {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+}
+
+.neuro-card-accent {
+    background-color: #354252;
+    border-left: 4px solid #728EA6;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Header badge */
+.badge-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    background-color: rgba(114, 142, 166, 0.2);
+    color: #8EAABF;
+    border: 1px solid rgba(114, 142, 166, 0.4);
+    margin-bottom: 0.5rem;
+}
+
+.badge-school {
+    background-color: rgba(76, 175, 80, 0.15);
+    color: #81C784;
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.badge-ug {
+    background-color: rgba(33, 150, 243, 0.15);
+    color: #64B5F6;
+    border-color: rgba(33, 150, 243, 0.4);
+}
+
+.badge-expert {
+    background-color: rgba(156, 39, 176, 0.15);
+    color: #BA68C8;
+    border-color: rgba(156, 39, 176, 0.4);
+}
+
+/* Metric / Stat box */
+.stat-box {
+    background-color: #343F4E;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-val {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #F2F2F2;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #AEB7BF;
+    margin-top: 0.25rem;
+}
+
+/* Prompt Comparison Columns */
+.prompt-box {
+    background-color: #343F4E;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 100%;
+    border-top: 3px solid #728EA6;
+}
+
+/* Custom buttons */
+.stButton > button {
+    background-color: #728EA6 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.25rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+.stButton > button:hover {
+    background-color: #8EAABF !important;
+    transform: translateY(-1px);
+}
+
+/* Text area and inputs */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div {
+    background-color: #343F4E !important;
+    color: #F2F2F2 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #728EA6 !important;
+    box-shadow: 0 0 0 1px #728EA6 !important;
+}
+
+/* Tabs styling */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: #232936;
+    border-radius: 8px;
+    padding: 4px;
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: #AEB7BF !important;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #3C4959 !important;
+    color: #F2F2F2 !important;
+    font-weight: 600;
+}
+
+/* Chat message bubbles */
+.chat-user {
+    background-color: #343F4E;
+    border-radius: 12px 12px 2px 12px;
+    padding: 0.85rem 1.2rem;
+    margin: 0.5rem 0;
+    max-width: 85%;
+    margin-left: auto;
+    border: 1px solid rgba(114, 142, 166, 0.3);
+}
+
+.chat-assistant {
+    background-color: #3C4959;
+    border-radius: 12px 12px 12px 2px;
+    padding: 0.95rem 1.3rem;
+    margin: 0.5rem 0;
+    max-width: 88%;
+    margin-right: auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Grounding status banners */
+.grounding-supported {
+    background-color: rgba(76, 175, 80, 0.15);
+    border: 1px solid #4CAF50;
+    color: #A5D6A7;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.grounding-partial {
+    background-color: rgba(255, 152, 0, 0.15);
+    border: 1px solid #FF9800;
+    color: #FFE082;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.grounding-unsupported {
+    background-color: rgba(244, 67, 54, 0.15);
+    border: 1px solid #F44336;
+    color: #EF9A9A;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+/* Code blocks */
+code {
+    background-color: #232936 !important;
+    color: #E2E8F0 !important;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+/* Muted subtitles */
+.text-muted {
+    color: #AEB7BF !important;
+    font-size: 0.9rem;
+}

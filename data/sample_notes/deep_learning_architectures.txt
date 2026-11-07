@@ -1,0 +1,21 @@
+# Unit II & IV — Deep Learning, GANs & PyTorch Mechanics
+Course: Generative AI
+Topic: Adversarial Networks, Backpropagation, and Neural Representation
+
+## 1. Generative Adversarial Networks (GANs)
+Formulated by Goodfellow et al. (2014), a GAN consists of two competing networks engaging in a zero-sum minimax game:
+- Generator G(z; theta_g): Maps prior noise z ~ p_z to synthetic data G(z).
+- Discriminator D(x; theta_d): Evaluates probability that sample x is from real distribution p_data rather than synthetic p_g.
+The minimax objective function is:
+min_G max_D V(D, G) = E_{x ~ p_data}[log D(x)] + E_{z ~ p_z}[log(1 - D(G(z)))]
+When the discriminator is optimal, this minimizes the Jensen-Shannon (JS) divergence between the real and generated data distributions.
+
+## 2. Common GAN Failure Modes
+- Mode Collapse: The generator collapses to produce only a tiny subset of distinct realistic samples, failing to cover the full variance of the data distribution.
+- Vanishing Gradients: When the discriminator learns too quickly, log(1 - D(G(z))) saturates and gradients vanish, stalling generator updates. Mitigated via non-saturating loss -log D(G(z)) or Wasserstein GAN with Gradient Penalty (WGAN-GP).
+
+## 3. PyTorch Computational Graphs & Autograd
+PyTorch utilizes reverse-mode automatic differentiation over dynamically constructed Directed Acyclic Graphs (DAGs).
+During the forward pass, PyTorch builds execution graphs tracking tensor operations.
+During loss.backward(), the multivariate chain rule propagates partial derivatives dL/dW through each parameter tensor, allowing gradient descent updates:
+W = W - eta * (dL/dW)

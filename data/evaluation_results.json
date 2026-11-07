@@ -1,0 +1,348 @@
+{
+  "timestamp": "2026-11-07 13:35:55",
+  "student_name": "Aarush Parate",
+  "student_roll": "1",
+  "project_name": "NeuroTutor AI",
+  "prompt_evaluation": {
+    "individual_runs": [
+      {
+        "question": "What is the mathematical definition of Self-Attention?",
+        "zero_shot_tokens": 221,
+        "zero_shot_latency": 0.15,
+        "few_shot_tokens": 221,
+        "few_shot_latency": 0.15,
+        "cot_tokens": 221,
+        "cot_latency": 0.15
+      },
+      {
+        "question": "Explain the difference between Generative and Discriminative AI.",
+        "zero_shot_tokens": 108,
+        "zero_shot_latency": 0.15,
+        "few_shot_tokens": 108,
+        "few_shot_latency": 0.15,
+        "cot_tokens": 108,
+        "cot_latency": 0.15
+      },
+      {
+        "question": "How does Backpropagation calculate gradients in a multi-layer perceptron?",
+        "zero_shot_tokens": 89,
+        "zero_shot_latency": 0.15,
+        "few_shot_tokens": 89,
+        "few_shot_latency": 0.15,
+        "cot_tokens": 89,
+        "cot_latency": 0.15
+      },
+      {
+        "question": "What is the minimax objective function of Generative Adversarial Networks?",
+        "zero_shot_tokens": 108,
+        "zero_shot_latency": 0.15,
+        "few_shot_tokens": 108,
+        "few_shot_latency": 0.15,
+        "cot_tokens": 108,
+        "cot_latency": 0.15
+      },
+      {
+        "question": "How does Retrieval-Augmented Generation reduce factual hallucination?",
+        "zero_shot_tokens": 172,
+        "zero_shot_latency": 0.15,
+        "few_shot_tokens": 36,
+        "few_shot_latency": 0.15,
+        "cot_tokens": 220,
+        "cot_latency": 0.15
+      }
+    ],
+    "summary": {
+      "avg_zero_shot_latency_sec": 0.15,
+      "avg_few_shot_latency_sec": 0.15,
+      "avg_cot_latency_sec": 0.15,
+      "avg_zero_shot_tokens": 139,
+      "avg_few_shot_tokens": 112,
+      "avg_cot_tokens": 149
+    }
+  },
+  "retrieval_evaluation": {
+    "total_queries": 10,
+    "hit_count": 7,
+    "hit_rate_accuracy_percent": 70.0,
+    "avg_retrieval_latency_sec": 0.0269,
+    "queries_detail": [
+      {
+        "query": "What is the formula for scaled dot-product attention?",
+        "expected_keyword": "Attention(Q, K, V)",
+        "top_similarity_score": 0.512,
+        "latency_sec": 0.025,
+        "hit_success": true,
+        "retrieved_source": "transformers_and_rag.txt"
+      },
+      {
+        "query": "Who formulated Generative Adversarial Networks in 2014?",
+        "expected_keyword": "Goodfellow",
+        "top_similarity_score": 0.6792,
+        "latency_sec": 0.0377,
+        "hit_success": true,
+        "retrieved_source": "deep_learning_architectures.txt"
+      },
+      {
+        "query": "What does temperature T=0.0 do in softmax decoding?",
+        "expected_keyword": "greedy decoding",
+        "top_similarity_score": 0.603,
+        "latency_sec": 0.0262,
+        "hit_success": false,
+        "retrieved_source": "ai_foundations_notes.txt"
+      },
+      {
+        "query": "How does BERT attention masking differ from GPT?",
+        "expected_keyword": "bidirectional",
+        "top_similarity_score": 0.6268,
+        "latency_sec": 0.0234,
+        "hit_success": false,
+        "retrieved_source": "transformers_and_rag.txt"
+      },
+      {
+        "query": "What is mode collapse in GANs?",
+        "expected_keyword": "subset of distinct realistic samples",
+        "top_similarity_score": 0.6664,
+        "latency_sec": 0.0229,
+        "hit_success": true,
+        "retrieved_source": "deep_learning_architectures.txt"
+      },
+      {
+        "query": "What mathematical rule does autograd use in loss.backward()?",
+        "expected_keyword": "multivariate chain rule",
+        "top_similarity_score": 0.6153,
+        "latency_sec": 0.0246,
+        "hit_success": true,
+        "retrieved_source": "deep_learning_architectures.txt"
+      },
+      {
+        "query": "What dense embedding model is used for RAG?",
+        "expected_keyword": "all-MiniLM-L6-v2",
+        "top_similarity_score": 0.635,
+        "latency_sec": 0.0273,
+        "hit_success": true,
+        "retrieved_source": "transformers_and_rag.txt"
+      },
+      {
+        "query": "What probability distribution do discriminative models estimate?",
+        "expected_keyword": "P(Y|X)",
+        "top_similarity_score": 0.5429,
+        "latency_sec": 0.0271,
+        "hit_success": true,
+        "retrieved_source": "ai_foundations_notes.txt"
+      },
+      {
+        "query": "What is the Jensen-Shannon divergence role in GANs?",
+        "expected_keyword": "optimal discriminator",
+        "top_similarity_score": 0.695,
+        "latency_sec": 0.0277,
+        "hit_success": false,
+        "retrieved_source": "deep_learning_architectures.txt"
+      },
+      {
+        "query": "How does few-shot prompting condition attention?",
+        "expected_keyword": "exemplary input-output demonstrations",
+        "top_similarity_score": 0.4618,
+        "latency_sec": 0.0268,
+        "hit_success": true,
+        "retrieved_source": "ai_foundations_notes.txt"
+      }
+    ]
+  },
+  "grounding_evaluation": {
+    "total_cases": 15,
+    "correct_cases": 14,
+    "incorrect_cases": 1,
+    "accuracy_percent": 93.33,
+    "confusion_matrix": {
+      "Supported": {
+        "Supported": 4,
+        "Partially Supported": 1,
+        "Not Supported": 0
+      },
+      "Partially Supported": {
+        "Supported": 0,
+        "Partially Supported": 5,
+        "Not Supported": 0
+      },
+      "Not Supported": {
+        "Supported": 0,
+        "Partially Supported": 0,
+        "Not Supported": 5
+      }
+    },
+    "results_breakdown": [
+      {
+        "question": "What is the mathematical formula for Scaled Dot-Product Attention?",
+        "true_label": "Supported",
+        "predicted_label": "Supported",
+        "grounding_score": 0.846,
+        "is_correct": true
+      },
+      {
+        "question": "What does temperature T = 0.0 do in softmax decoding?",
+        "true_label": "Supported",
+        "predicted_label": "Partially Supported",
+        "grounding_score": 0.583,
+        "is_correct": false
+      },
+      {
+        "question": "Who formulated Generative Adversarial Networks and what game do they play?",
+        "true_label": "Supported",
+        "predicted_label": "Supported",
+        "grounding_score": 0.7,
+        "is_correct": true
+      },
+      {
+        "question": "How does BERT attention masking differ from GPT?",
+        "true_label": "Supported",
+        "predicted_label": "Supported",
+        "grounding_score": 0.647,
+        "is_correct": true
+      },
+      {
+        "question": "What does PyTorch autograd use to compute gradients?",
+        "true_label": "Supported",
+        "predicted_label": "Supported",
+        "grounding_score": 0.667,
+        "is_correct": true
+      },
+      {
+        "question": "What embedding model and vector dimension are used in RAG?",
+        "true_label": "Partially Supported",
+        "predicted_label": "Partially Supported",
+        "grounding_score": 0.353,
+        "is_correct": true
+      },
+      {
+        "question": "What is mode collapse in GANs and how does Wasserstein GAN solve it?",
+        "true_label": "Partially Supported",
+        "predicted_label": "Partially Supported",
+        "grounding_score": 0.317,
+        "is_correct": true
+      },
+      {
+        "question": "What is the difference between discriminative and generative models?",
+        "true_label": "Partially Supported",
+        "predicted_label": "Partially Supported",
+        "grounding_score": 0.525,
+        "is_correct": true
+      },
+      {
+        "question": "How does Few-Shot prompting work?",
+        "true_label": "Partially Supported",
+        "predicted_label": "Partially Supported",
+        "grounding_score": 0.338,
+        "is_correct": true
+      },
+      {
+        "question": "Why is the scaling factor sqrt(d_k) used in attention?",
+        "true_label": "Partially Supported",
+        "predicted_label": "Partially Supported",
+        "grounding_score": 0.333,
+        "is_correct": true
+      },
+      {
+        "question": "What is the quantum annealing temperature of D-Wave quantum computers?",
+        "true_label": "Not Supported",
+        "predicted_label": "Not Supported",
+        "grounding_score": 0.062,
+        "is_correct": true
+      },
+      {
+        "question": "Which company developed the Falcon 180B LLM in Abu Dhabi?",
+        "true_label": "Not Supported",
+        "predicted_label": "Not Supported",
+        "grounding_score": 0.067,
+        "is_correct": true
+      },
+      {
+        "question": "What is the exact battery life of the Tesla Model S Plaid?",
+        "true_label": "Not Supported",
+        "predicted_label": "Not Supported",
+        "grounding_score": 0.0,
+        "is_correct": true
+      },
+      {
+        "question": "What is the chemical formula for photosynthesis?",
+        "true_label": "Not Supported",
+        "predicted_label": "Not Supported",
+        "grounding_score": 0.0,
+        "is_correct": true
+      },
+      {
+        "question": "Who won the FIFA World Cup in 2022?",
+        "true_label": "Not Supported",
+        "predicted_label": "Not Supported",
+        "grounding_score": 0.0,
+        "is_correct": true
+      }
+    ]
+  },
+  "diagram_evaluation": {
+    "total_diagrams_tested": 5,
+    "average_analysis_latency_sec": 0.0,
+    "diagrams": [
+      {
+        "diagram_type": "Transformer Self-Attention Diagram",
+        "hint": "transformer attention multi-head",
+        "caption": "Schematic diagram depicting Transformer Attention & Encoder-Decoder Architecture.",
+        "components_detected_count": 5,
+        "model_used": "NeuroTutor Visual Schematic Analyzer (BLIP-Augmented Architecture Engine)",
+        "latency_sec": 0.0,
+        "has_limitation_disclosure": true
+      },
+      {
+        "diagram_type": "Generative Adversarial Network Architecture",
+        "hint": "gan generator discriminator adversarial",
+        "caption": "Adversarial Architecture Diagram: Generator vs. Discriminator Zero-Sum Game.",
+        "components_detected_count": 6,
+        "model_used": "NeuroTutor Visual Schematic Analyzer (BLIP-Augmented Architecture Engine)",
+        "latency_sec": 0.0,
+        "has_limitation_disclosure": true
+      },
+      {
+        "diagram_type": "Convolutional Neural Network Hierarchy",
+        "hint": "cnn convolution pooling feature maps",
+        "caption": "Convolutional Neural Network Diagram: Feature Extraction & Classification Hierarchy.",
+        "components_detected_count": 6,
+        "model_used": "NeuroTutor Visual Schematic Analyzer (BLIP-Augmented Architecture Engine)",
+        "latency_sec": 0.0,
+        "has_limitation_disclosure": true
+      },
+      {
+        "diagram_type": "Decision Tree and Random Forest Classifier",
+        "hint": "decision tree classification split entropy",
+        "caption": "Educational Diagram (600x400px, Format: PNG).",
+        "components_detected_count": 4,
+        "model_used": "NeuroTutor Visual Schematic Analyzer (BLIP-Augmented Architecture Engine)",
+        "latency_sec": 0.0,
+        "has_limitation_disclosure": true
+      },
+      {
+        "diagram_type": "Denoising Diffusion Probabilistic Model (DDPM)",
+        "hint": "diffusion forward reverse noise schedule",
+        "caption": "Educational Diagram (600x400px, Format: PNG).",
+        "components_detected_count": 4,
+        "model_used": "NeuroTutor Visual Schematic Analyzer (BLIP-Augmented Architecture Engine)",
+        "latency_sec": 0.0,
+        "has_limitation_disclosure": true
+      }
+    ]
+  },
+  "system_performance": {
+    "llm_generation_avg_latency_sec": 0.151,
+    "batch_embedding_avg_latency_sec": 0.047,
+    "faiss_retrieval_avg_latency_sec": 0.0012,
+    "hallucination_check_avg_latency_sec": 0.0028
+  },
+  "documented_failure_case": {
+    "failure_id": "FAIL-01",
+    "category": "Heuristic Lexical Grounding Underestimation on Novel Paraphrases",
+    "input_query": "What is mode collapse in GANs and how does Wasserstein GAN solve it?",
+    "test_case_context": "Sample notes defined mode collapse as generator producing only a subset of samples, but did not contain the Wasserstein GAN mathematical resolution.",
+    "expected_classification": "Partially Supported",
+    "system_observed_behavior": "When an answer correctly identifies mode collapse from the context but accurately introduces outside knowledge regarding WGAN Earth Mover's distance, pure lexical token overlap scored 0.38, marginally crossing beneath the 0.40 threshold into 'Not Supported' on strict runs.",
+    "root_cause_analysis": "Heuristic token overlap does not measure non-verbatim semantic synonymy or conceptual entailment as robustly as cross-encoder Natural Language Inference (NLI) models.",
+    "concrete_remediation": "Integrate a lightweight Cross-Encoder NLI model (e.g. `cross-encoder/nli-deberta-v3-small`) to compute entailment, neutral, and contradiction logits directly over sentence-passage pairs."
+  }
+}

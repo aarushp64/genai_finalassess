@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "question": "What is the mathematical formula for Scaled Dot-Product Attention?",
+    "passages": [
+      "Vaswani et al. (2017) defined the Scaled Dot-Product Attention as Attention(Q, K, V) = softmax((Q * K^T) / sqrt(d_k)) * V where Q, K, and V represent Query, Key, and Value matrices."
+    ],
+    "answer": "The mathematical formula for Scaled Dot-Product Attention is Attention(Q, K, V) = softmax((Q * K^T) / sqrt(d_k)) * V where Q, K, and V are Query, Key, and Value matrices.",
+    "ground_truth_label": "Supported"
+  },
+  {
+    "id": 2,
+    "question": "What does temperature T = 0.0 do in softmax decoding?",
+    "passages": [
+      "p_i = exp(z_i / T) / sum_j exp(z_j / T). T = 0.0 corresponds to greedy decoding (argmax), always picking the highest-logit token deterministically."
+    ],
+    "answer": "Temperature T = 0.0 in softmax decoding causes greedy decoding or argmax, which deterministically chooses the token with the highest logit.",
+    "ground_truth_label": "Supported"
+  },
+  {
+    "id": 3,
+    "question": "Who formulated Generative Adversarial Networks and what game do they play?",
+    "passages": [
+      "Formulated by Goodfellow et al. (2014), a GAN consists of two competing networks engaging in a zero-sum minimax game."
+    ],
+    "answer": "Generative Adversarial Networks were introduced by Goodfellow et al. in 2014 as two networks competing in a zero-sum minimax game.",
+    "ground_truth_label": "Supported"
+  },
+  {
+    "id": 4,
+    "question": "How does BERT attention masking differ from GPT?",
+    "passages": [
+      "BERT: Attention is bidirectional across the entire sequence. GPT: Employs causal lower-triangular attention masking to prevent forward information leakage."
+    ],
+    "answer": "BERT uses bidirectional attention across the whole sequence, while GPT uses causal lower-triangular attention masking to prevent seeing future tokens.",
+    "ground_truth_label": "Supported"
+  },
+  {
+    "id": 5,
+    "question": "What does PyTorch autograd use to compute gradients?",
+    "passages": [
+      "PyTorch utilizes reverse-mode automatic differentiation over dynamically constructed Directed Acyclic Graphs (DAGs). During loss.backward(), the multivariate chain rule propagates partial derivatives."
+    ],
+    "answer": "PyTorch autograd computes gradients using reverse-mode automatic differentiation over dynamic directed acyclic graphs via the multivariate chain rule.",
+    "ground_truth_label": "Supported"
+  },
+  {
+    "id": 6,
+    "question": "What embedding model and vector dimension are used in RAG?",
+    "passages": [
+      "Dense bi-encoders like Sentence-BERT (all-MiniLM-L6-v2) encode chunks into 384-dimensional Euclidean vectors."
+    ],
+    "answer": "Sentence-BERT all-MiniLM-L6-v2 generates 384-dimensional vectors, and additionally OpenAI text-embedding-3-small produces 1536-dimensional embeddings with MRL dimensionality reduction.",
+    "ground_truth_label": "Partially Supported"
+  },
+  {
+    "id": 7,
+    "question": "What is mode collapse in GANs and how does Wasserstein GAN solve it?",
+    "passages": [
+      "Mode Collapse: The generator collapses to produce only a tiny subset of distinct realistic samples, failing to cover the full variance of the data distribution."
+    ],
+    "answer": "Mode collapse happens when the generator produces only a limited variety of samples. Wasserstein GAN uses the Earth Mover distance and gradient penalties to guarantee convergence and completely prevent all mode collapse.",
+    "ground_truth_label": "Partially Supported"
+  },
+  {
+    "id": 8,
+    "question": "What is the difference between discriminative and generative models?",
+    "passages": [
+      "Discriminative models estimate the conditional probability distribution P(Y|X), while Generative models estimate the joint probability distribution P(X, Y) or marginal P(X)."
+    ],
+    "answer": "Discriminative models calculate conditional probability P(Y|X) whereas generative models estimate joint probability P(X,Y). Furthermore, discriminative models always require 100 times less training memory than generative models.",
+    "ground_truth_label": "Partially Supported"
+  },
+  {
+    "id": 9,
+    "question": "How does Few-Shot prompting work?",
+    "passages": [
+      "Few-Shot Prompting: Supplying k exemplary input-output demonstrations before the final query. Conditions the autoregressive attention mechanism without updating model weights."
+    ],
+    "answer": "Few-shot prompting provides input-output examples in context to guide the model. It also performs internal gradient descent updates on the key-value cache memory weights during runtime.",
+    "ground_truth_label": "Partially Supported"
+  },
+  {
+    "id": 10,
+    "question": "Why is the scaling factor sqrt(d_k) used in attention?",
+    "passages": [
+      "The scaling factor sqrt(d_k) counteracts extreme dot product magnitudes in high-dimensional vector spaces that would otherwise push the softmax derivative into vanishing gradient plateaus."
+    ],
+    "answer": "The scaling factor sqrt(d_k) stabilizes dot products to prevent vanishing gradients in softmax, and it also automatically compresses the sequence length by half on GPU hardware.",
+    "ground_truth_label": "Partially Supported"
+  },
+  {
+    "id": 11,
+    "question": "What is the quantum annealing temperature of D-Wave quantum computers?",
+    "passages": [
+      "p_i = exp(z_i / T) / sum_j exp(z_j / T). Temperature T controls softmax decoding randomness in neural language models."
+    ],
+    "answer": "D-Wave quantum computers operate at an ultra-cold cryogenic annealing temperature of approximately 15 millikelvin using liquid helium dilution refrigerators.",
+    "ground_truth_label": "Not Supported"
+  },
+  {
+    "id": 12,
+    "question": "Which company developed the Falcon 180B LLM in Abu Dhabi?",
+    "passages": [
+      "BERT was developed by Devlin et al. (2018) and GPT was developed by Radford et al. (2018)."
+    ],
+    "answer": "Falcon 180B was developed by the Technology Innovation Institute (TII) located in Abu Dhabi, UAE, trained on 3.5 trillion tokens of the RefinedWeb dataset.",
+    "ground_truth_label": "Not Supported"
+  },
+  {
+    "id": 13,
+    "question": "What is the exact battery life of the Tesla Model S Plaid?",
+    "passages": [
+      "PyTorch utilizes reverse-mode automatic differentiation over dynamically constructed Directed Acyclic Graphs."
+    ],
+    "answer": "The Tesla Model S Plaid features an estimated EPA driving range of 359 miles on a single charge with its 100 kWh lithium-ion battery pack.",
+    "ground_truth_label": "Not Supported"
+  },
+  {
+    "id": 14,
+    "question": "What is the chemical formula for photosynthesis?",
+    "passages": [
+      "A GAN consists of two competing networks engaging in a zero-sum minimax game."
+    ],
+    "answer": "The chemical equation for photosynthesis is 6CO2 + 6H2O + light energy -> C6H12O6 + 6O2, converting carbon dioxide and water into glucose and oxygen.",
+    "ground_truth_label": "Not Supported"
+  },
+  {
+    "id": 15,
+    "question": "Who won the FIFA World Cup in 2022?",
+    "passages": [
+      "Discriminative models estimate P(Y|X) while generative models estimate P(X, Y)."
+    ],
+    "answer": "Argentina won the 2022 FIFA World Cup in Qatar, defeating France in a penalty shootout following a 3-3 draw in the final.",
+    "ground_truth_label": "Not Supported"
+  }
+]

@@ -1,0 +1,20 @@
+# Unit III — Transformers, BERT, GPT and Retrieval-Augmented Generation
+Course: Generative AI
+Topic: Attention Mechanisms, Pretraining Paradigms, and Semantic Vector Search
+
+## 1. Scaled Dot-Product Attention
+Vaswani et al. (2017) defined the Scaled Dot-Product Attention as:
+Attention(Q, K, V) = softmax((Q * K^T) / sqrt(d_k)) * V
+where Q, K, and V represent Query, Key, and Value matrices projected from token embeddings.
+The scaling factor sqrt(d_k) counteracts extreme dot product magnitudes in high-dimensional vector spaces that would otherwise push the softmax derivative into vanishing gradient plateaus.
+
+## 2. Architectural Comparison: GPT vs. BERT
+- BERT (Devlin et al., 2018): Encoder-only transformer architecture trained via Masked Language Modeling (MLM) and Next Sentence Prediction (NSP). Attention is bidirectional across the entire sequence, ideal for dense semantic representation and classification.
+- GPT (Radford et al., 2018): Decoder-only transformer architecture trained autoregressively to predict the next token p(x_t | x_<t). Employs causal lower-triangular attention masking to prevent forward information leakage, ideal for open-ended text synthesis.
+
+## 3. Retrieval-Augmented Generation (RAG) Architecture
+A typical RAG pipeline contains:
+1. Ingestion: Documents are extracted and divided into overlapping chunks of size L with overlap O.
+2. Embedding: Dense bi-encoders like Sentence-BERT (all-MiniLM-L6-v2) encode chunks into 384-dimensional Euclidean vectors.
+3. Indexing: Normalized vectors are stored in FAISS indexes (IndexFlatIP) for fast inner-product similarity search.
+4. Synthesis: Top-k nearest chunks are retrieved and prepended to the user query as ground-truth evidence, mitigating model hallucination.
