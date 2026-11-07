@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Diagram Explainer Page
 Author: Aarush Parate (Roll No: 1)
 Unit III: GPT, BERT and Multimodal Models
@@ -19,8 +19,8 @@ def render_diagram_explainer(explainer: ImageExplainer):
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit III: Multimodal Models</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">AI Architecture Diagram Explainer</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">AI Architecture Diagram Explainer</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Upload architecture schematics, flowcharts, or neural network diagrams to receive automated 
                 visual captions, structural component identification, and technical interpretations.
             </p>
@@ -113,7 +113,7 @@ def render_diagram_explainer(explainer: ImageExplainer):
                 f"""
                 <div class="neuro-card" style="border-left: 4px solid #FF9800; background-color: #354252;">
                     <div style="font-size: 0.85rem; font-weight: 700; color: #FFE082;">⚖️ Transparent Limitation Disclosure</div>
-                    <div style="font-size: 0.8rem; color: #AEB7BF; margin-top: 0.2rem;">
+                    <div style="font-size: 0.8rem; color: #AAB5C4; margin-top: 0.2rem;">
                         {limitation_text}
                     </div>
                 </div>

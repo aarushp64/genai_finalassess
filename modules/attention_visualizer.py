@@ -153,25 +153,25 @@ class AttentionVisualizer:
                 colorscale="Blues",
                 zmin=0.0,
                 zmax=float(np.max(matrix_to_plot)),
-                colorbar=dict(title="Attention Weight", tickformat=".2f"),
+                colorbar=dict(title=dict(text="Attention Weight", font=dict(color="#AAB5C4")), tickfont=dict(color="#AAB5C4"), tickformat=".2f"),
                 hovertemplate="Query: %{y}<br>Key: %{x}<br>Attention Weight: %{z:.4f}<extra></extra>",
             )
         )
 
         fig.update_layout(
-            title=dict(text=title, font=dict(color="#F2F2F2", size=15)),
+            title=dict(text=title, font=dict(color="#F2F4F7", size=14)),
             xaxis=dict(
-                title=dict(text="Key Tokens (Attended To)", font=dict(color="#AEB7BF")),
-                tickfont=dict(color="#F2F2F2", size=11),
+                title=dict(text="Key Tokens (Attended To)", font=dict(color="#AAB5C4")),
+                tickfont=dict(color="#F2F4F7", size=11),
                 side="bottom",
             ),
             yaxis=dict(
-                title=dict(text="Query Tokens (Attending From)", font=dict(color="#AEB7BF")),
-                tickfont=dict(color="#F2F2F2", size=11),
+                title=dict(text="Query Tokens (Attending From)", font=dict(color="#AAB5C4")),
+                tickfont=dict(color="#F2F4F7", size=11),
                 autorange="reversed",
             ),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
             margin=dict(l=60, r=40, t=50, b=60),
             height=500,
         )

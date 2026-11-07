@@ -128,8 +128,8 @@ class PyTorchDemoEngine:
                     x=layer_names,
                     y=norms,
                     marker=dict(
-                        color="#728EA6",
-                        line=dict(color="#8EAABF", width=1.5),
+                        color="#8BAFD0",
+                        line=dict(color="#A4C4E2", width=1.5),
                     ),
                     hovertemplate="Layer: %{x}<br>Gradient Norm L2: %{y:.5f}<extra></extra>",
                 )
@@ -139,12 +139,12 @@ class PyTorchDemoEngine:
         fig.update_layout(
             title=dict(
                 text="PyTorch Backpropagation: L2 Gradient Norms (dL/dW)",
-                font=dict(color="#F2F2F2", size=14),
+                font=dict(color="#F2F4F7", size=14),
             ),
-            xaxis=dict(title="Parameter Tensor", color="#AEB7BF", tickangle=-20),
-            yaxis=dict(title="Gradient Magnitude (L2 Norm)", color="#AEB7BF"),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
+            xaxis=dict(title="Parameter Tensor", color="#AAB5C4", tickangle=-20),
+            yaxis=dict(title="Gradient Magnitude (L2 Norm)", color="#AAB5C4", gridcolor="#39465A"),
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
             margin=dict(l=50, r=30, t=50, b=60),
             height=320,
         )

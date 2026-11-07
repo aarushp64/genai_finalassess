@@ -32,19 +32,21 @@ STUDENT_ROLL = "1"
 PROJECT_CODE = "P1"
 COURSE_NAME = "Generative AI"
 
-# Theme Colors (Deep navy, steel surfaces, muted blue accents, off-white typography)
+# Theme Colors (Modern AI SaaS: Linear/Notion inspired)
 THEME_COLORS = {
-    "primary_bg": "#2A3140",
-    "surface": "#3C4959",
-    "surface_light": "#4A5A6D",
-    "accent": "#728EA6",
-    "accent_hover": "#8EAABF",
-    "muted_text": "#AEB7BF",
-    "main_text": "#F2F2F2",
-    "success": "#4CAF50",
-    "warning": "#FF9800",
-    "danger": "#F44336",
-    "card_border": "rgba(255, 255, 255, 0.08)",
+    "primary_bg": "#171D29",
+    "sidebar": "#202838",
+    "card_bg": "#293548",
+    "secondary_surface": "#303E52",
+    "accent": "#8BAFD0",
+    "accent_hover": "#A4C4E2",
+    "main_text": "#F2F4F7",
+    "secondary_text": "#AAB5C4",
+    "border": "#39465A",
+    "success": "#34D399",
+    "warning": "#FBBF24",
+    "danger": "#F87171",
+    "card_border": "#39465A",
 }
 
 # API Configuration

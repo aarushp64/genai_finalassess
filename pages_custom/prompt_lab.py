@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Prompt Engineering Lab Page
 Author: Aarush Parate (Roll No: 1)
 Unit I: Foundations of Generative AI
@@ -20,8 +20,8 @@ def render_prompt_lab(lab: PromptEngineeringLab):
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit I: Foundations of GenAI</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">Prompt Engineering Lab</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">Prompt Engineering Lab</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Compare prompting paradigms (Zero-Shot, Few-Shot, Chain-of-Thought), inspect softmax temperature dynamics, 
                 and explore probabilistic latent representations.
             </p>
@@ -97,8 +97,8 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                     """
                     <div class="prompt-box">
                         <span class="badge-tag" style="background-color: rgba(33, 150, 243, 0.2); color: #64B5F6;">Technique A</span>
-                        <h4 style="margin: 0.2rem 0; color: #F2F2F2;">Zero-Shot Prompting</h4>
-                        <p style="color: #AEB7BF; font-size: 0.8rem;">Direct task instruction without exemplary demonstrations.</p>
+                        <h4 style="margin: 0.2rem 0; color: #F2F4F7;">Zero-Shot Prompting</h4>
+                        <p style="color: #AAB5C4; font-size: 0.8rem;">Direct task instruction without exemplary demonstrations.</p>
                     </div>
                     """,
                     unsafe_allow_html=True,
@@ -115,8 +115,8 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                     """
                     <div class="prompt-box">
                         <span class="badge-tag" style="background-color: rgba(76, 175, 80, 0.2); color: #81C784;">Technique B</span>
-                        <h4 style="margin: 0.2rem 0; color: #F2F2F2;">Few-Shot Prompting</h4>
-                        <p style="color: #AEB7BF; font-size: 0.8rem;">In-context learning with structured input-output demonstration pairs.</p>
+                        <h4 style="margin: 0.2rem 0; color: #F2F4F7;">Few-Shot Prompting</h4>
+                        <p style="color: #AAB5C4; font-size: 0.8rem;">In-context learning with structured input-output demonstration pairs.</p>
                     </div>
                     """,
                     unsafe_allow_html=True,
@@ -133,8 +133,8 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                     """
                     <div class="prompt-box">
                         <span class="badge-tag" style="background-color: rgba(156, 39, 176, 0.2); color: #BA68C8;">Technique C</span>
-                        <h4 style="margin: 0.2rem 0; color: #F2F2F2;">Chain-of-Thought (CoT)</h4>
-                        <p style="color: #AEB7BF; font-size: 0.8rem;">Forces explicit step-by-step intermediate reasoning before terminal answer.</p>
+                        <h4 style="margin: 0.2rem 0; color: #F2F4F7;">Chain-of-Thought (CoT)</h4>
+                        <p style="color: #AAB5C4; font-size: 0.8rem;">Forces explicit step-by-step intermediate reasoning before terminal answer.</p>
                     </div>
                     """,
                     unsafe_allow_html=True,
@@ -170,7 +170,7 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                 f"""
                 <div class="neuro-card" style="margin-top: 1rem;">
                     <strong>Mathematical Regimes:</strong>
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem; margin-top: 0.3rem;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem; margin-top: 0.3rem;">
                         <li><strong>T &rarr; 0.0 (Greedy):</strong> Probability collapses into a Dirac delta on the argmax logit. Zero entropy.</li>
                         <li><strong>T &approx; 0.7 (Balanced):</strong> Preserves rank order while allowing natural grammatical variations.</li>
                         <li><strong>T &gt; 1.0 (High Entropy):</strong> Flattens the distribution towards uniform random sampling across the vocabulary.</li>
@@ -203,12 +203,12 @@ def render_prompt_lab(lab: PromptEngineeringLab):
             fig_temp.update_layout(
                 title=dict(
                     text=f"Next-Token Softmax Probability Distribution (T={sim_temp:.2f}, Shannon Entropy={entropy:.3f} bits)",
-                    font=dict(color="#F2F2F2", size=13),
+                    font=dict(color="#F2F4F7", size=13),
                 ),
-                xaxis=dict(title="Candidate Vocabulary Tokens", color="#AEB7BF"),
-                yaxis=dict(title="Probability P(w_i)", color="#AEB7BF", range=[0, 1.1]),
-                paper_bgcolor="#2A3140",
-                plot_bgcolor="#343F4E",
+                xaxis=dict(title="Candidate Vocabulary Tokens", color="#AAB5C4", gridcolor="#39465A"),
+                yaxis=dict(title="Probability P(w_i)", color="#AAB5C4", gridcolor="#39465A", range=[0, 1.1]),
+                paper_bgcolor="#171D29",
+                plot_bgcolor="#202838",
                 margin=dict(l=40, r=40, t=50, b=40),
                 height=350,
             )
@@ -227,12 +227,12 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                 <div class="neuro-card">
                     <span class="badge-tag" style="background-color: rgba(76, 175, 80, 0.2); color: #81C784;">P(X, Y) or P(X)</span>
                     <h4 style="color: #81C784; margin-top: 0.2rem;">Generative Models</h4>
-                    <p style="color: #AEB7BF; font-size: 0.9rem;">
+                    <p style="color: #AAB5C4; font-size: 0.9rem;">
                         Learn the <strong>joint probability distribution</strong> $P(X, Y)$ or data distribution $P(X)$. 
                         They capture how the data is generated and can synthesize completely new samples.
                     </p>
                     <hr style="border-color: rgba(255,255,255,0.08);">
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem;">
                         <li><strong>Core Formula:</strong> $P(Y|X) = \\frac{P(X, Y)}{P(X)} = \\frac{P(X|Y)P(Y)}{\\sum_y P(X|y)P(y)}$</li>
                         <li><strong>Objective:</strong> Density estimation & data generation</li>
                         <li><strong>Algorithms:</strong> Naive Bayes, GANs, VAEs, Diffusion Models, Autoregressive LLMs</li>
@@ -248,12 +248,12 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                 <div class="neuro-card">
                     <span class="badge-tag" style="background-color: rgba(33, 150, 243, 0.2); color: #64B5F6;">P(Y | X)</span>
                     <h4 style="color: #64B5F6; margin-top: 0.2rem;">Discriminative Models</h4>
-                    <p style="color: #AEB7BF; font-size: 0.9rem;">
+                    <p style="color: #AAB5C4; font-size: 0.9rem;">
                         Learn the <strong>conditional probability distribution</strong> $P(Y | X)$ directly. 
                         They optimize decision boundaries that separate classes without modeling underlying data mechanics.
                     </p>
                     <hr style="border-color: rgba(255,255,255,0.08);">
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem;">
                         <li><strong>Core Formula:</strong> $P(Y|X) = \\sigma(w^T X + b)$ or $f(X)$</li>
                         <li><strong>Objective:</strong> Finding optimal separating hyperplanes</li>
                         <li><strong>Algorithms:</strong> Logistic Regression, Support Vector Machines (SVM), Random Forests, ResNet</li>
@@ -304,13 +304,13 @@ def render_prompt_lab(lab: PromptEngineeringLab):
         fig_boundary.update_layout(
             title=dict(
                 text="Discriminative Boundary (Line) vs Generative Cluster Densities (Clouds)",
-                font=dict(color="#F2F2F2", size=13),
+                font=dict(color="#F2F4F7", size=13),
             ),
-            xaxis=dict(title="Feature 1 (x_1)", color="#AEB7BF"),
-            yaxis=dict(title="Feature 2 (x_2)", color="#AEB7BF"),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
-            legend=dict(font=dict(color="#F2F2F2"), orientation="h", yanchor="bottom", y=1.02),
+            xaxis=dict(title="Feature 1 (x_1)", color="#AAB5C4", gridcolor="#39465A"),
+            yaxis=dict(title="Feature 2 (x_2)", color="#AAB5C4", gridcolor="#39465A"),
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
+            legend=dict(font=dict(color="#F2F4F7"), orientation="h", yanchor="bottom", y=1.02),
             height=380,
             margin=dict(l=40, r=40, t=60, b=40),
         )
@@ -338,8 +338,8 @@ def render_prompt_lab(lab: PromptEngineeringLab):
             st.markdown(
                 f"""
                 <div class="neuro-card" style="padding: 0.9rem 1.2rem; margin-bottom: 0.6rem;">
-                    <strong style="color: #8EAABF; font-size: 0.95rem;">{title}</strong>
-                    <div style="color: #AEB7BF; font-size: 0.85rem; margin-top: 0.2rem;">{desc}</div>
+                    <strong style="color: #8BAFD0; font-size: 0.95rem;">{title}</strong>
+                    <div style="color: #AAB5C4; font-size: 0.85rem; margin-top: 0.2rem;">{desc}</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -393,19 +393,19 @@ def render_prompt_lab(lab: PromptEngineeringLab):
                     name=cat,
                     text=[p["concept"] for p in cat_pts],
                     textposition="top center",
-                    textfont=dict(color="#F2F2F2", size=10),
-                    marker=dict(color=cat_colors[cat], size=11, line=dict(color="#F2F2F2", width=1)),
+                    textfont=dict(color="#F2F4F7", size=10),
+                    marker=dict(color=cat_colors[cat], size=11, line=dict(color="#F2F4F7", width=1)),
                     hovertemplate="<b>%{text}</b><br>Category: " + cat + "<br>Latent (z1, z2): (%{x:.2f}, %{y:.2f})<extra></extra>",
                 )
             )
 
         fig_latent.update_layout(
-            title=dict(text="Semantic Distance & Manifold Clusters in 2D Latent Projection", font=dict(color="#F2F2F2", size=14)),
-            xaxis=dict(title="Latent Dimension z_1", color="#AEB7BF"),
-            yaxis=dict(title="Latent Dimension z_2", color="#AEB7BF"),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
-            legend=dict(font=dict(color="#F2F2F2")),
+            title=dict(text="Semantic Distance & Manifold Clusters in 2D Latent Projection", font=dict(color="#F2F4F7", size=14)),
+            xaxis=dict(title="Latent Dimension z_1", color="#AAB5C4", gridcolor="#39465A"),
+            yaxis=dict(title="Latent Dimension z_2", color="#AAB5C4", gridcolor="#39465A"),
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
+            legend=dict(font=dict(color="#F2F4F7")),
             height=450,
             margin=dict(l=40, r=40, t=50, b=40),
         )

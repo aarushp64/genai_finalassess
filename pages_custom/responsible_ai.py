@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Responsible AI & Ethics Page
 Author: Aarush Parate (Roll No: 1)
 Unit V: Responsible AI and Ethics
@@ -19,8 +19,8 @@ def render_responsible_ai():
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit V: Responsible AI & Ethics</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">Responsible AI, Grounding & Safety Dashboard</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">Responsible AI, Grounding & Safety Dashboard</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Measurable hallucination detection, benchmark evaluation metrics, adversarial prompt injection defense, 
                 and transparent ethical disclosures.
             </p>
@@ -107,10 +107,10 @@ def render_responsible_ai():
                     <div style="font-weight: 700; color: #EF9A9A; font-size: 1rem;">
                         [{fail_case.get('failure_id')}] {fail_case.get('category')}
                     </div>
-                    <div style="color: #F2F2F2; font-size: 0.9rem; margin-top: 0.4rem;">
+                    <div style="color: #F2F4F7; font-size: 0.9rem; margin-top: 0.4rem;">
                         <strong>Input Query:</strong> <em>"{fail_case.get('input_query')}"</em>
                     </div>
-                    <div style="color: #AEB7BF; font-size: 0.85rem; margin-top: 0.4rem; line-height: 1.5;">
+                    <div style="color: #AAB5C4; font-size: 0.85rem; margin-top: 0.4rem; line-height: 1.5;">
                         <strong>Expected Output:</strong> {fail_case.get('expected_classification')}<br>
                         <strong>Observed Output:</strong> {fail_case.get('system_observed_behavior')}<br>
                         <strong>Root Cause:</strong> {fail_case.get('root_cause_analysis')}<br>
@@ -212,8 +212,8 @@ def render_responsible_ai():
         st.markdown(
             """
             <div class="neuro-card">
-                <h4 style="color: #F2F2F2; margin-top: 0;">1. Open-Source Model Licensing & Attribution</h4>
-                <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6;">
+                <h4 style="color: #F2F4F7; margin-top: 0;">1. Open-Source Model Licensing & Attribution</h4>
+                <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6;">
                     <li><strong>DistilBERT (Hugging Face / Sanh et al.):</strong> Apache License 2.0. Used for real local attention extraction.</li>
                     <li><strong>Sentence-BERT all-MiniLM-L6-v2 (Reimers & Gurevych):</strong> Apache License 2.0. Used for 384-d dense embedding generation.</li>
                     <li><strong>FAISS (Meta Research):</strong> MIT License. In-memory exact inner product semantic search.</li>
@@ -227,8 +227,8 @@ def render_responsible_ai():
         st.markdown(
             """
             <div class="neuro-card">
-                <h4 style="color: #F2F2F2; margin-top: 0;">2. Privacy & Student Data Protection</h4>
-                <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6;">
+                <h4 style="color: #F2F4F7; margin-top: 0;">2. Privacy & Student Data Protection</h4>
+                <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6;">
                     <li><strong>Ephemeral Ingestion:</strong> Uploaded student lecture notes and PDFs are processed in volatile session memory. No student data is written to permanent database disks or shared externally.</li>
                     <li><strong>Untrusted Data Boundary:</strong> Retrieved notes are encapsulated strictly as untrusted evidence context, defusing delimiter-based prompt injections embedded inside documents.</li>
                 </ul>
@@ -239,8 +239,8 @@ def render_responsible_ai():
         st.markdown(
             """
             <div class="neuro-card">
-                <h4 style="color: #F2F2F2; margin-top: 0;">3. AI-Generated Content Transparency</h4>
-                <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6;">
+                <h4 style="color: #F2F4F7; margin-top: 0;">3. AI-Generated Content Transparency</h4>
+                <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.2rem; line-height: 1.6;">
                     <li>All diagrams created in the Image Studio are clearly disclosed as AI-generated synthetic concept illustrations, not real photographic evidence.</li>
                     <li>Uncertainty Fallback: When reference notes lack supporting facts, the system emits <em>"I'm not sure based on the available notes"</em> rather than hallucinating plausible falsehoods.</li>
                 </ul>

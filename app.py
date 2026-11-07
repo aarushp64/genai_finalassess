@@ -66,20 +66,16 @@ llm_engine, memory_mgr, prompt_lab_engine, attention_visualizer, rag_engine, dia
 with st.sidebar:
     st.markdown(
         f"""
-        <div style="text-align: center; padding: 0.5rem 0 1rem 0;">
-            <h2 style="margin: 0; color: #F2F2F2; font-size: 1.5rem;">🧠 {config.APP_TITLE}</h2>
-            <div style="font-size: 0.75rem; color: #8EAABF; margin-top: 0.2rem;">
-                AI–ML–DL Multi-Level Concept Tutor
-            </div>
-            <div style="display: inline-block; background-color: rgba(114, 142, 166, 0.15); border: 1px solid rgba(114, 142, 166, 0.3); border-radius: 9999px; padding: 0.2rem 0.6rem; font-size: 0.7rem; color: #8EAABF; margin-top: 0.5rem;">
-                Roll 1 • Aarush Parate • P1
-            </div>
+        <div class="sidebar-brand">
+            <h2>🧠 {config.APP_TITLE}</h2>
+            <div class="sidebar-brand-subtitle">AI–ML–DL Concept Platform</div>
+            <div class="sidebar-student-badge">Roll 1 • Aarush Parate • P1</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-    st.markdown("### 🧭 Navigation")
+    st.markdown("<div style='font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #8BAFD0; font-weight: 600; margin-bottom: 0.4rem;'>🧭 Platform Modules</div>", unsafe_allow_html=True)
     pages = [
         "1. Dashboard",
         "2. AI Concept Tutor",
@@ -128,19 +124,22 @@ with st.sidebar:
     # Active Provider Status
     if llm_engine.api_key:
         status_color = "#4CAF50"
-        status_text = "Google Gemini 2.5 Flash (Live API)"
+        status_text = "Google Gemini 2.5 Flash"
     elif llm_engine.groq_api_key:
-        status_color = "#2196F3"
-        status_text = "Groq Llama 3.3 70B (Live API)"
+        status_color = "#8BAFD0"
+        status_text = "Groq Llama 3.3 70B"
     else:
-        status_color = "#FF9800"
-        status_text = "Local Knowledge Engine (Offline Active)"
+        status_color = "#FFA726"
+        status_text = "Local Knowledge Engine"
 
     st.markdown(
         f"""
-        <div style="font-size: 0.75rem; color: #AEB7BF; padding: 0.4rem 0;">
-            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: {status_color}; margin-right: 6px;"></span>
-            <strong>Engine:</strong> {status_text}
+        <div style="background-color: #293548; border: 1px solid #39465A; border-radius: 6px; padding: 0.5rem 0.75rem; margin-top: 0.5rem; font-size: 0.75rem; color: #AAB5C4;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background-color: {status_color};"></span>
+                <span style="color: #F2F4F7; font-weight: 600;">Engine:</span>
+            </div>
+            <div style="margin-top: 2px; color: #8BAFD0; font-weight: 500;">{status_text}</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -149,8 +148,8 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(
         f"""
-        <div style="font-size: 0.7rem; color: #6C7A89; text-align: center;">
-            {config.COURSE_NAME} Continuous Assessment<br>
+        <div style="font-size: 0.7rem; color: #AAB5C4; text-align: center; line-height: 1.4;">
+            <strong style="color: #F2F4F7;">{config.COURSE_NAME}</strong><br>
             B.Tech Computer Science &bull; Roll 1
         </div>
         """,

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-07 13:35:55",
+  "timestamp": "2026-11-07 14:41:27",
   "student_name": "Aarush Parate",
   "student_roll": "1",
   "project_name": "NeuroTutor AI",
@@ -26,11 +26,11 @@
       {
         "question": "How does Backpropagation calculate gradients in a multi-layer perceptron?",
         "zero_shot_tokens": 89,
-        "zero_shot_latency": 0.15,
+        "zero_shot_latency": 0.17,
         "few_shot_tokens": 89,
         "few_shot_latency": 0.15,
         "cot_tokens": 89,
-        "cot_latency": 0.15
+        "cot_latency": 0.16
       },
       {
         "question": "What is the minimax objective function of Generative Adversarial Networks?",
@@ -52,9 +52,9 @@
       }
     ],
     "summary": {
-      "avg_zero_shot_latency_sec": 0.15,
+      "avg_zero_shot_latency_sec": 0.154,
       "avg_few_shot_latency_sec": 0.15,
-      "avg_cot_latency_sec": 0.15,
+      "avg_cot_latency_sec": 0.152,
       "avg_zero_shot_tokens": 139,
       "avg_few_shot_tokens": 112,
       "avg_cot_tokens": 149
@@ -64,13 +64,13 @@
     "total_queries": 10,
     "hit_count": 7,
     "hit_rate_accuracy_percent": 70.0,
-    "avg_retrieval_latency_sec": 0.0269,
+    "avg_retrieval_latency_sec": 0.0286,
     "queries_detail": [
       {
         "query": "What is the formula for scaled dot-product attention?",
         "expected_keyword": "Attention(Q, K, V)",
         "top_similarity_score": 0.512,
-        "latency_sec": 0.025,
+        "latency_sec": 0.0326,
         "hit_success": true,
         "retrieved_source": "transformers_and_rag.txt"
       },
@@ -78,7 +78,7 @@
         "query": "Who formulated Generative Adversarial Networks in 2014?",
         "expected_keyword": "Goodfellow",
         "top_similarity_score": 0.6792,
-        "latency_sec": 0.0377,
+        "latency_sec": 0.0266,
         "hit_success": true,
         "retrieved_source": "deep_learning_architectures.txt"
       },
@@ -86,7 +86,7 @@
         "query": "What does temperature T=0.0 do in softmax decoding?",
         "expected_keyword": "greedy decoding",
         "top_similarity_score": 0.603,
-        "latency_sec": 0.0262,
+        "latency_sec": 0.0283,
         "hit_success": false,
         "retrieved_source": "ai_foundations_notes.txt"
       },
@@ -94,7 +94,7 @@
         "query": "How does BERT attention masking differ from GPT?",
         "expected_keyword": "bidirectional",
         "top_similarity_score": 0.6268,
-        "latency_sec": 0.0234,
+        "latency_sec": 0.0271,
         "hit_success": false,
         "retrieved_source": "transformers_and_rag.txt"
       },
@@ -102,7 +102,7 @@
         "query": "What is mode collapse in GANs?",
         "expected_keyword": "subset of distinct realistic samples",
         "top_similarity_score": 0.6664,
-        "latency_sec": 0.0229,
+        "latency_sec": 0.0248,
         "hit_success": true,
         "retrieved_source": "deep_learning_architectures.txt"
       },
@@ -110,7 +110,7 @@
         "query": "What mathematical rule does autograd use in loss.backward()?",
         "expected_keyword": "multivariate chain rule",
         "top_similarity_score": 0.6153,
-        "latency_sec": 0.0246,
+        "latency_sec": 0.0283,
         "hit_success": true,
         "retrieved_source": "deep_learning_architectures.txt"
       },
@@ -118,7 +118,7 @@
         "query": "What dense embedding model is used for RAG?",
         "expected_keyword": "all-MiniLM-L6-v2",
         "top_similarity_score": 0.635,
-        "latency_sec": 0.0273,
+        "latency_sec": 0.0285,
         "hit_success": true,
         "retrieved_source": "transformers_and_rag.txt"
       },
@@ -126,7 +126,7 @@
         "query": "What probability distribution do discriminative models estimate?",
         "expected_keyword": "P(Y|X)",
         "top_similarity_score": 0.5429,
-        "latency_sec": 0.0271,
+        "latency_sec": 0.0284,
         "hit_success": true,
         "retrieved_source": "ai_foundations_notes.txt"
       },
@@ -134,7 +134,7 @@
         "query": "What is the Jensen-Shannon divergence role in GANs?",
         "expected_keyword": "optimal discriminator",
         "top_similarity_score": 0.695,
-        "latency_sec": 0.0277,
+        "latency_sec": 0.0312,
         "hit_success": false,
         "retrieved_source": "deep_learning_architectures.txt"
       },
@@ -142,7 +142,7 @@
         "query": "How does few-shot prompting condition attention?",
         "expected_keyword": "exemplary input-output demonstrations",
         "top_similarity_score": 0.4618,
-        "latency_sec": 0.0268,
+        "latency_sec": 0.0301,
         "hit_success": true,
         "retrieved_source": "ai_foundations_notes.txt"
       }
@@ -331,7 +331,7 @@
   },
   "system_performance": {
     "llm_generation_avg_latency_sec": 0.151,
-    "batch_embedding_avg_latency_sec": 0.047,
+    "batch_embedding_avg_latency_sec": 0.045,
     "faiss_retrieval_avg_latency_sec": 0.0012,
     "hallucination_check_avg_latency_sec": 0.0028
   },

@@ -14,8 +14,8 @@ def render_about():
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Academic CA Mini-Project P1</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">About NeuroTutor AI & Model Card</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">About NeuroTutor AI & Model Card</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Official academic submission, comprehensive model card, and model transparency manifest.
             </p>
         </div>

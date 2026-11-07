@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Concept Image Studio Page
 Author: Aarush Parate (Roll No: 1)
 Unit IV: Generative AI Tools and Techniques
@@ -17,8 +17,8 @@ def render_image_studio():
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit IV: Multimodal Generation Studio</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">AI Concept Illustration Generator</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">AI Concept Illustration Generator</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Transform complex mathematical and algorithmic concepts into high-resolution educational diagrams 
                 using automated prompt expansion and hosted diffusion models.
             </p>

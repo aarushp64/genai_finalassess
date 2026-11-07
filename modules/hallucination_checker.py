@@ -177,12 +177,12 @@ class HallucinationChecker:
         fig.update_layout(
             title=dict(
                 text="Grounding & Hallucination Evaluation Confusion Matrix",
-                font=dict(color="#F2F2F2", size=14),
+                font=dict(color="#F2F4F7", size=14),
             ),
-            xaxis=dict(title="Predicted Label", color="#AEB7BF"),
-            yaxis=dict(title="Ground Truth Label", color="#AEB7BF", autorange="reversed"),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
+            xaxis=dict(title="Predicted Label", color="#AAB5C4"),
+            yaxis=dict(title="Ground Truth Label", color="#AAB5C4", autorange="reversed"),
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
             margin=dict(l=60, r=40, t=50, b=50),
             height=350,
         )

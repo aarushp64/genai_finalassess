@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Attention Explorer Page
 Author: Aarush Parate (Roll No: 1)
 Unit II: GANs and Large Language Models
@@ -17,8 +17,8 @@ def render_attention_explorer(visualizer: AttentionVisualizer):
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit II: Transformer Attention</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">Transformer Attention Explorer</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">Transformer Attention Explorer</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Extract and inspect <strong>real attention weight matrices</strong> from a local Hugging Face DistilBERT transformer 
                 across 6 layers and 12 multi-head attention subspaces.
             </p>
@@ -153,12 +153,12 @@ def render_attention_explorer(visualizer: AttentionVisualizer):
         """
         <div class="neuro-card" style="border-left: 4px solid #FF9800;">
             <h4 style="color: #FFE082; margin-top: 0;">⚠️ Academic Interpretation Notice: Attention &ne; Explanation</h4>
-            <p style="color: #AEB7BF; font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.4rem;">
+            <p style="color: #AAB5C4; font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.4rem;">
                 In peer-reviewed literature (e.g., <em>Jain & Wallace, 2019 "Attention is not Explanation"</em>; 
                 <em>Wiegreffe & Pinter, 2019 "Attention is not not Explanation"</em>), attention weights reflect the mathematical 
                 routing of vectors between representation subspaces during forward inference.
             </p>
-            <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.2rem; margin: 0;">
+            <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.2rem; margin: 0;">
                 <li>Attention weights do not necessarily represent human-like causal rationale.</li>
                 <li>Multiple distinct attention patterns can yield mathematically identical model outputs.</li>
                 <li>Different heads naturally specialize: early heads often track syntax and neighboring bigrams, while deeper heads capture long-range semantic anaphora.</li>

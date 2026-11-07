@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Concept Tutor Page
 Author: Aarush Parate (Roll No: 1)
 Unit II: Conversational AI Tutor & Session Memory
@@ -18,8 +18,8 @@ def render_concept_tutor(llm: LLMEngine, memory: ConversationMemoryManager):
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit II: Conversational AI</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">Conversational Concept Tutor</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">Conversational Concept Tutor</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Ask any question about AI, Machine Learning, or Deep Learning. 
                 Select your knowledge level and receive tailored analogies, algorithms, or research insights.
             </p>
@@ -65,8 +65,8 @@ def render_concept_tutor(llm: LLMEngine, memory: ConversationMemoryManager):
             st.markdown(
                 f"""
                 <div class="chat-user">
-                    <span style="font-size: 0.75rem; color: #8EAABF; font-weight: 600;">You</span>
-                    <div style="color: #F2F2F2; margin-top: 0.2rem;">{turn['user']}</div>
+                    <span style="font-size: 0.75rem; color: #8BAFD0; font-weight: 600;">You</span>
+                    <div style="color: #F2F4F7; margin-top: 0.2rem;">{turn['user']}</div>
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -77,10 +77,10 @@ def render_concept_tutor(llm: LLMEngine, memory: ConversationMemoryManager):
                 f"""
                 <div class="chat-assistant">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-                        <span style="font-size: 0.8rem; font-weight: 700; color: #8EAABF;">NeuroTutor AI</span>
+                        <span style="font-size: 0.8rem; font-weight: 700; color: #8BAFD0;">NeuroTutor AI</span>
                         <span class="badge-tag {badge_class}" style="margin: 0;">{turn['level']}</span>
                     </div>
-                    <div style="color: #F2F2F2; line-height: 1.6;">
+                    <div style="color: #F2F4F7; line-height: 1.6;">
                 """,
                 unsafe_allow_html=True,
             )

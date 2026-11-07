@@ -94,13 +94,22 @@ def run_demo():
         print("\n--- [DEMO 1] Initial Inspection & Dashboard ---")
         try:
             page.goto(APP_URL, wait_until="networkidle", timeout=30000)
-            page.wait_for_selector("text=NeuroTutor AI", timeout=15000)
-            wait_for_streamlit_idle(page)
+            wait_for_streamlit_idle(page, timeout=45000)
+            page.wait_for_selector("text=NeuroTutor AI", timeout=20000)
             page.wait_for_timeout(2500)
 
             has_title = page.locator("text=NeuroTutor AI").first.is_visible()
-            has_levels = page.locator("text=School Level").first.is_visible()
             has_roll = page.locator("text=Aarush Parate").first.is_visible()
+
+            # Scroll smoothly to reveal learning levels and syllabus architecture
+            levels_elem = page.locator("text=School Level").first
+            levels_elem.scroll_into_view_if_needed()
+            page.wait_for_timeout(1000)
+            has_levels = levels_elem.is_visible()
+
+            # Scroll back to top
+            page.locator("text=NeuroTutor AI").first.scroll_into_view_if_needed()
+            page.wait_for_timeout(800)
 
             if has_title and has_levels and has_roll:
                 log_test("Dashboard", "Application loading, navigation, and level overview", "PASS", "Dashboard rendered with 3 levels & metadata.")

@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - GAN Explorer & PyTorch Implementation Page
 Author: Aarush Parate (Roll No: 1)
 Unit II (GANs) & Unit IV (PyTorch Neural Network & Autograd Demonstration)
@@ -17,8 +17,8 @@ def render_gan_explorer():
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Units II & IV: GANs & PyTorch Implementation</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">GAN Explorer & PyTorch Implementation Lab</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">GAN Explorer & PyTorch Implementation Lab</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Train an interactive PyTorch GAN in real time to capture continuous distributions, 
                 and inspect dynamic forward-backward computational graphs in an educational neural network.
             </p>
@@ -83,7 +83,7 @@ def render_gan_explorer():
                 r"""
                 <div class="neuro-card">
                     <h5 style="color: #FF9800; margin-top: 0;">Generator Network G(z)</h5>
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.5;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.5;">
                         <li><strong>Input:</strong> Latent vector $z \sim \mathcal{N}(0, I_4)$</li>
                         <li><code>Linear(4 &rarr; 32) + ReLU</code></li>
                         <li><code>Linear(32 &rarr; 32) + ReLU</code></li>
@@ -99,7 +99,7 @@ def render_gan_explorer():
                 r"""
                 <div class="neuro-card">
                     <h5 style="color: #2196F3; margin-top: 0;">Discriminator Network D(x)</h5>
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.5;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.5;">
                         <li><strong>Input:</strong> Sample $x \in \mathbb{R}^1$ (Real or Synthetic)</li>
                         <li><code>Linear(1 &rarr; 32) + LeakyReLU(0.2)</code></li>
                         <li><code>Linear(32 &rarr; 32) + LeakyReLU(0.2)</code></li>

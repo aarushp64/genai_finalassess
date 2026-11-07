@@ -146,7 +146,7 @@ class GANExplorerEngine:
                 x=real_samples,
                 name="Real Target Distribution (Bimodal Gaussian)",
                 opacity=0.65,
-                marker_color="#2196F3",
+                marker_color="#8BAFD0",
                 nbinsx=40,
                 histnorm="probability density",
             )
@@ -156,7 +156,7 @@ class GANExplorerEngine:
                 x=generated_samples,
                 name="GAN Generated Samples G(z)",
                 opacity=0.65,
-                marker_color="#FF9800",
+                marker_color="#FFA726",
                 nbinsx=40,
                 histnorm="probability density",
             )
@@ -165,14 +165,14 @@ class GANExplorerEngine:
         fig.update_layout(
             title=dict(
                 text=f"Real vs GAN Generated Distributions (Trained {self.total_epochs} Epochs)",
-                font=dict(color="#F2F2F2", size=14),
+                font=dict(color="#F2F4F7", size=14),
             ),
             barmode="overlay",
-            xaxis=dict(title="Value (x)", color="#AEB7BF"),
-            yaxis=dict(title="Probability Density", color="#AEB7BF"),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
-            legend=dict(font=dict(color="#F2F2F2"), orientation="h", yanchor="bottom", y=1.02),
+            xaxis=dict(title="Value (x)", color="#AAB5C4", gridcolor="#39465A"),
+            yaxis=dict(title="Probability Density", color="#AAB5C4", gridcolor="#39465A"),
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
+            legend=dict(font=dict(color="#F2F4F7"), orientation="h", yanchor="bottom", y=1.02),
             margin=dict(l=40, r=40, t=60, b=40),
             height=380,
         )
@@ -188,7 +188,7 @@ class GANExplorerEngine:
                     y=self.d_loss_history,
                     mode="lines",
                     name="Discriminator Loss (L_D)",
-                    line=dict(color="#F44336", width=2),
+                    line=dict(color="#EF5350", width=2),
                 )
             )
             fig.add_trace(
@@ -197,17 +197,17 @@ class GANExplorerEngine:
                     y=self.g_loss_history,
                     mode="lines",
                     name="Generator Loss (L_G)",
-                    line=dict(color="#4CAF50", width=2),
+                    line=dict(color="#81C784", width=2),
                 )
             )
 
         fig.update_layout(
-            title=dict(text="Adversarial Loss History", font=dict(color="#F2F2F2", size=14)),
-            xaxis=dict(title="Training Steps / Epochs", color="#AEB7BF"),
-            yaxis=dict(title="Binary Cross-Entropy Loss", color="#AEB7BF"),
-            paper_bgcolor="#2A3140",
-            plot_bgcolor="#343F4E",
-            legend=dict(font=dict(color="#F2F2F2")),
+            title=dict(text="Adversarial Loss History", font=dict(color="#F2F4F7", size=14)),
+            xaxis=dict(title="Training Steps / Epochs", color="#AAB5C4", gridcolor="#39465A"),
+            yaxis=dict(title="Binary Cross-Entropy Loss", color="#AAB5C4", gridcolor="#39465A"),
+            paper_bgcolor="#171D29",
+            plot_bgcolor="#202838",
+            legend=dict(font=dict(color="#F2F4F7")),
             margin=dict(l=40, r=40, t=50, b=40),
             height=300,
         )

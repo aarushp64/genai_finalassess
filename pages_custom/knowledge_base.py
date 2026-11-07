@@ -1,4 +1,4 @@
-"""
+﻿"""
 NeuroTutor AI - Knowledge Base & RAG Page
 Author: Aarush Parate (Roll No: 1)
 Unit III: GPT, BERT and Multimodal Models
@@ -20,8 +20,8 @@ def render_knowledge_base(rag: RAGEngine, llm: LLMEngine):
         """
         <div class="neuro-card-accent">
             <span class="badge-tag">Unit III: Knowledge Base & RAG</span>
-            <h2 style="margin: 0.2rem 0; color: #F2F2F2;">Academic Knowledge Base & Semantic Search</h2>
-            <p style="color: #AEB7BF; font-size: 0.95rem; margin-top: 0.3rem;">
+            <h2 style="margin: 0.2rem 0; color: #F2F4F7;">Academic Knowledge Base & Semantic Search</h2>
+            <p style="color: #AAB5C4; font-size: 0.95rem; margin-top: 0.3rem;">
                 Upload academic notes (PDF, DOCX, TXT), index them using <strong>Sentence-BERT (all-MiniLM-L6-v2)</strong> and <strong>FAISS</strong>, 
                 and receive strict syllabus-grounded answers.
             </p>
@@ -48,8 +48,8 @@ def render_knowledge_base(rag: RAGEngine, llm: LLMEngine):
             st.markdown(
                 """
                 <div class="neuro-card" style="padding: 0.8rem 1rem;">
-                    <div style="font-size: 0.85rem; font-weight: 600; color: #F2F2F2;">Pre-loaded Sample Notes Available:</div>
-                    <div style="font-size: 0.8rem; color: #AEB7BF; margin-top: 0.2rem;">
+                    <div style="font-size: 0.85rem; font-weight: 600; color: #F2F4F7;">Pre-loaded Sample Notes Available:</div>
+                    <div style="font-size: 0.8rem; color: #AAB5C4; margin-top: 0.2rem;">
                         Foundations of GenAI, Deep Learning Architectures, and Transformers & RAG course notes.
                     </div>
                 </div>
@@ -226,11 +226,11 @@ def render_knowledge_base(rag: RAGEngine, llm: LLMEngine):
                 <div class="neuro-card" style="border-top: 3px solid #2196F3;">
                     <span class="badge-tag" style="background-color: rgba(33, 150, 243, 0.2); color: #64B5F6;">Decoder-Only</span>
                     <h3 style="color: #64B5F6; margin-top: 0.2rem;">GPT Family (Generative Pre-trained Transformer)</h3>
-                    <p style="color: #AEB7BF; font-size: 0.9rem;">
+                    <p style="color: #AAB5C4; font-size: 0.9rem;">
                         Optimized for <strong>autoregressive sequence generation</strong>.
                     </p>
                     <hr style="border-color: rgba(255,255,255,0.08);">
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.6;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.6;">
                         <li><strong>Attention Mask:</strong> Causal lower-triangular mask. Tokens can only attend to past positions: $j \le i$.</li>
                         <li><strong>Pre-training Objective:</strong> Next-Token Prediction: $\max_\theta \sum_t \log P(x_t | x_{<t}; \theta)$.</li>
                         <li><strong>Directionality:</strong> Unidirectional (Left-to-Right).</li>
@@ -247,11 +247,11 @@ def render_knowledge_base(rag: RAGEngine, llm: LLMEngine):
                 <div class="neuro-card" style="border-top: 3px solid #4CAF50;">
                     <span class="badge-tag" style="background-color: rgba(76, 175, 80, 0.2); color: #81C784;">Encoder-Only</span>
                     <h3 style="color: #81C784; margin-top: 0.2rem;">BERT Family (Bidirectional Encoder)</h3>
-                    <p style="color: #AEB7BF; font-size: 0.9rem;">
+                    <p style="color: #AAB5C4; font-size: 0.9rem;">
                         Optimized for <strong>dense semantic representation & language understanding</strong>.
                     </p>
                     <hr style="border-color: rgba(255,255,255,0.08);">
-                    <ul style="color: #AEB7BF; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.6;">
+                    <ul style="color: #AAB5C4; font-size: 0.85rem; padding-left: 1.1rem; line-height: 1.6;">
                         <li><strong>Attention Mask:</strong> Unconstrained bidirectional mask (all ones). Every token attends to every other token.</li>
                         <li><strong>Pre-training Objective:</strong> Masked Language Modeling (MLM: 15% tokens masked) + Next Sentence Prediction (NSP).</li>
                         <li><strong>Directionality:</strong> Fully bidirectional.</li>

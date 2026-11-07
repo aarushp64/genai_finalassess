@@ -73,14 +73,14 @@ class ImageGenerator:
     def _create_procedural_fallback_image(concept: str) -> Tuple[Image.Image, bytes]:
         """Creates a high-contrast educational schematic card using PIL."""
         width, height = 768, 512
-        img = Image.new("RGB", (width, height), color="#2A3140")
+        img = Image.new("RGB", (width, height), color="#171D29")
         draw = ImageDraw.Draw(img)
 
         # Draw border
-        draw.rectangle([20, 20, width - 20, height - 20], outline="#728EA6", width=2)
+        draw.rectangle([20, 20, width - 20, height - 20], outline="#39465A", width=2)
 
         # Draw decorative diagram blocks
-        colors = ["#3C4959", "#4A5A6D", "#343F4E"]
+        colors = ["#293548", "#303E52", "#293548"]
         box_coords = [
             (80, 180, 220, 320),
             (310, 150, 460, 350),
@@ -89,16 +89,16 @@ class ImageGenerator:
         labels = ["Input Layer\nx ~ p(x)", "Processing Core\nTransformer / NN", "Output Layer\nPrediction y"]
 
         for idx, (coord, label) in enumerate(zip(box_coords, labels)):
-            draw.rounded_rectangle(coord, radius=12, fill=colors[idx % len(colors)], outline="#728EA6", width=2)
-            draw.text((coord[0] + 15, coord[1] + 45), label, fill="#F2F2F2")
+            draw.rounded_rectangle(coord, radius=8, fill=colors[idx % len(colors)], outline="#8BAFD0", width=2)
+            draw.text((coord[0] + 15, coord[1] + 45), label, fill="#F2F4F7")
 
         # Draw connecting arrows
-        draw.line([(220, 250), (310, 250)], fill="#8EAABF", width=4)
-        draw.line([(460, 250), (550, 250)], fill="#8EAABF", width=4)
+        draw.line([(220, 250), (310, 250)], fill="#8BAFD0", width=4)
+        draw.line([(460, 250), (550, 250)], fill="#8BAFD0", width=4)
 
         # Title
-        draw.text((80, 60), f"NeuroTutor AI — Concept Schematic: {concept.upper()}", fill="#F2F2F2")
-        draw.text((80, 95), "Educational Architecture Representation & Dataflow Pipeline", fill="#AEB7BF")
+        draw.text((80, 60), f"NeuroTutor AI — Concept Schematic: {concept.upper()}", fill="#F2F4F7")
+        draw.text((80, 95), "Educational Architecture Representation & Dataflow Pipeline", fill="#AAB5C4")
 
         buf = io.BytesIO()
         img.save(buf, format="PNG")
