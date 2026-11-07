@@ -1,12 +1,17 @@
-# Python
+# Python cache & compiled bytecode
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# Virtual Environments
 env/
 venv/
 ENV/
+.venv/
+
+# Build & packaging
 build/
 develop-eggs/
 dist/
@@ -29,18 +34,26 @@ wheels/
 .streamlit/secrets.toml
 secrets.toml
 
-# Streamlit
+# Streamlit session & cache
 .streamlit/
 
-# Temporary files & cache
+# Temporary test artifacts & recordings cache
+recordings/
 *.tmp
 *.log
+temp_audio/
+uploaded_docs/
 .pytest_cache/
 .coverage
 htmlcov/
-temp_audio/
-uploaded_docs/
 
-# OS specific
+# OS specific files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo

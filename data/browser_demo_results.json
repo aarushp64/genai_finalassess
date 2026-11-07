@@ -1,42 +1,38 @@
 {
-  "duration_seconds": 120.9,
-  "duration_formatted": "2m 0s",
+  "duration_seconds": 233.6,
+  "duration_formatted": "3m 53s",
   "video_file": "1_Aarush_Parate_NeuroTutor_Demo.webm",
+  "scrolling_actions_count": 33,
   "results": {
     "Dashboard": {
-      "test": "Application loading, navigation, and level overview",
-      "status": "PASS",
-      "details": "Dashboard rendered with 3 levels & metadata."
+      "test": "Application loading",
+      "status": "PARTIAL",
+      "details": "Rendered partially."
     },
     "AI Tutor": {
-      "test": "Undergraduate level technical explanation generation",
+      "test": "Multi-tier explanation, formatting & audio recap",
       "status": "PASS",
-      "details": "Answer generated with self-attention & architecture."
+      "details": "Undergraduate explanation rendered with complete self-attention breakdown and audio synthesis."
     },
     "Prompt Lab": {
-      "test": "Triple prompting technique comparison (Zero, Few, CoT)",
+      "test": "Triple prompting, softmax dynamics & decision boundaries",
       "status": "PASS",
-      "details": "All 3 techniques rendered side-by-side with latency & tokens."
+      "details": "Zero-Shot, Few-Shot, and CoT compared alongside interactive softmax probability charts."
     },
-    "Chatbot": {
-      "test": "Conversational sliding-window memory retention across turns",
+    "Attention / Chatbot": {
+      "test": "Memory retention & DistilBERT 72-head attention extraction",
       "status": "PASS",
-      "details": "Multi-turn dialogue maintained in session state."
-    },
-    "Attention": {
-      "test": "Hugging Face DistilBERT 72-head attention extraction & heatmap",
-      "status": "PASS",
-      "details": "Real DistilBERT attention weights rendered in Plotly heatmap."
+      "details": "Sliding-window context maintained and real attention heatmap visualized."
     },
     "RAG": {
-      "test": "Sentence-BERT + FAISS notes retrieval and grounded answer synthesis",
+      "test": "Sentence-BERT + FAISS notes retrieval & grounded synthesis",
       "status": "PASS",
-      "details": "Retrieved course chunks and synthesized grounded response."
+      "details": "Course notes indexed, answer grounded with evidence citations and mask comparisons."
     },
     "Diagram Explainer": {
-      "test": "Multimodal schematic parsing and limitation disclosure",
+      "test": "Multimodal schematic parsing & limitation disclosure",
       "status": "PASS",
-      "details": "Visual components and technical breakdown generated with transparent limitation notice."
+      "details": "Visual architecture parsed with component analysis and transparent limitations."
     },
     "Image Generation": {
       "test": "Diffusion concept illustration & download",
@@ -44,14 +40,19 @@
       "details": "Educational schematic rendered with PNG download button."
     },
     "Audio": {
-      "test": "gTTS spoken audio synthesis and playback control",
+      "test": "gTTS spoken audio synthesis & player playback",
       "status": "PASS",
-      "details": "Audio synthesized with native HTML5 player and MP3 download."
+      "details": "Voice summary generated with HTML5 audio player and MP3 download."
+    },
+    "GAN / PyTorch": {
+      "test": "PyTorch GAN training & computational graph autograd",
+      "status": "PASS",
+      "details": "Adversarial minimax training simulated and backpropagation gradients visualized."
     },
     "Responsible AI": {
-      "test": "Unsupported answer uncertainty refusal and grounding detection",
+      "test": "Grounding evaluation, uncertainty refusal & model card",
       "status": "PASS",
-      "details": "Correctly flagged unsupported quantum query as Not Supported."
+      "details": "Measurable 93.3% accuracy, confusion matrix, uncertainty refusal, and formal model card verified."
     }
   },
   "console_errors": []
