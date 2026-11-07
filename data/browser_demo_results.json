@@ -1,0 +1,58 @@
+{
+  "duration_seconds": 117.3,
+  "duration_formatted": "1m 57s",
+  "video_file": "1_Aarush_Parate_NeuroTutor_Demo.webm",
+  "results": {
+    "Dashboard": {
+      "test": "Application loading, navigation, and level overview",
+      "status": "PASS",
+      "details": "Dashboard rendered with 3 levels & metadata."
+    },
+    "AI Tutor": {
+      "test": "Undergraduate level technical explanation generation",
+      "status": "PASS",
+      "details": "Answer generated with self-attention & architecture."
+    },
+    "Prompt Lab": {
+      "test": "Triple prompting technique comparison (Zero, Few, CoT)",
+      "status": "PASS",
+      "details": "All 3 techniques rendered side-by-side with latency & tokens."
+    },
+    "Chatbot": {
+      "test": "Conversational sliding-window memory retention across turns",
+      "status": "PASS",
+      "details": "Multi-turn dialogue maintained in session state."
+    },
+    "Attention": {
+      "test": "Hugging Face DistilBERT 72-head attention extraction & heatmap",
+      "status": "PASS",
+      "details": "Real DistilBERT attention weights rendered in Plotly heatmap."
+    },
+    "RAG": {
+      "test": "Sentence-BERT + FAISS notes retrieval and grounded answer synthesis",
+      "status": "PASS",
+      "details": "Retrieved course chunks and synthesized grounded response."
+    },
+    "Diagram Explainer": {
+      "test": "Multimodal schematic parsing and limitation disclosure",
+      "status": "PASS",
+      "details": "Visual components and technical breakdown generated with transparent limitation notice."
+    },
+    "Image Generation": {
+      "test": "Diffusion concept illustration & download",
+      "status": "PASS",
+      "details": "Educational schematic rendered with PNG download button."
+    },
+    "Audio": {
+      "test": "gTTS spoken audio synthesis and playback control",
+      "status": "PASS",
+      "details": "Audio synthesized with native HTML5 player and MP3 download."
+    },
+    "Responsible AI": {
+      "test": "Unsupported answer uncertainty refusal and grounding detection",
+      "status": "PASS",
+      "details": "Correctly flagged unsupported quantum query as Not Supported."
+    }
+  },
+  "console_errors": []
+}
