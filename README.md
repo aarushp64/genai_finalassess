@@ -243,7 +243,9 @@ neurotutor-ai/
 │   └── run_all_evaluations.py  # Master evaluation benchmark runner
 │
 └── 1_Aarush_Parate/            # Official academic submission folder
-    └── 1_Aarush_Parate_P1.pdf  # Comprehensive academic PDF report
+    ├── 1_Aarush_Parate_P1.pdf  # Comprehensive 16-page academic PDF report with deployment evidence
+    ├── 1_Aarush_Parate_NeuroTutor_Demo.mp4  # Complete full-module HD video demo walkthrough
+    └── 1_Aarush_Parate_NeuroTutor_Demo.webm # WebM recording of live browser evaluation
 ```
 
 ---
